@@ -1,4 +1,7 @@
 <script>
+    import Visual from "./visual.svelte";
+
+
     import { onMount } from 'svelte';
     import MontyHallVisualization from './MontyHallVisualization.svelte';
     import * as d3 from 'd3';
@@ -50,6 +53,11 @@
   </script>
   
   <style>
+    .small-visualization {
+  width: 80%; /* Adjust width as needed */
+  max-width: 500px; /* Set a maximum width if needed */
+  margin: 0 auto; /* Center the visualization horizontally */
+}
    .section {
     height: 100vh; /* Full height of the viewport */
     overflow-y: auto; /* Enable scrolling within each section */
@@ -196,8 +204,14 @@
   <div class="section">
     <MontyHallVisualization />
   </div>
-  
-  
+
+  <div class="section">
+  <div class="content">
+    <div class="small-visualization">
+      <Visual />
+    </div>
+  </div>
+</div>
   
   <div class="section">
     <div>
@@ -215,3 +229,4 @@
           additional information, or none at all, and yield different probabilities.</p>
     </div>
   </div>
+  
